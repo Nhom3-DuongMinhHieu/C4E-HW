@@ -108,7 +108,7 @@ console.log(`\t${num1} ${operator} ${num2} = ${result}`);
 
 // Problem 4:
 let n = parseInt(prompt("Enter a positive number: "))
-while (!isFinite(n) || n < 0) {
+while (!isFinite(n)) {
     n = parseInt(prompt("Enter a positive number: "))
 }
 
