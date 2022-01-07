@@ -1,0 +1,259 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.margin {
+    padding: 0 40px;
+}
+
+/* Header start */
+#header {
+    height: 72px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo, .nav {
+    display: inline-block;
+}
+
+.logo a {
+    padding: 0 36px 0 0;
+    line-height: 72px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.nav {
+    float: right;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.item a {
+    font-size: 18px;
+    line-height: 72px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+.item a:hover {
+    background-color: gray;
+}
+
+.item-btn1 a, .item-btn2 a {
+    font-size: 18px;
+    line-height: 72px;
+    padding: 12px 16px;
+    margin: 0 4px;
+}
+
+.item-btn1 a {
+    border: 1px royalblue solid;
+    background-color: royalblue;
+}
+
+.item-btn1 a:hover {
+    background-color: rgb(97, 130, 228);
+}
+
+.item-btn2 a {
+    border: 1px royalblue solid;
+}
+/* Header end */
+
+/* About start */
+#about {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about h1 {
+    font-size: 60px;
+    margin: 20px;
+}
+
+#about p {
+    text-transform: capitalize;
+    font-style: italic;
+    font-size: 30px;
+}
+/* About end */
+
+/* Projects start */
+#projects {
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+}
+
+.project-margin {
+    padding: 100px 10%;
+}
+
+.project-title {
+    font-size: 42px;
+    margin: 0 auto 68px;
+    max-width: 640px;
+    border-bottom: 3px black solid;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1920px;
+}
+
+.grid-item {
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+}
+
+.grid-title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    width: 160px;
+    margin: 80px auto 60px;
+    padding: 15px 20px;
+    background-image: linear-gradient(to right, #ED4264 0%, #FFEDBC  51%, #ED4264  100%);
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+ .btn:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ }
+
+ #button {
+    display: none;
+ }
+
+ .project-grid:last-child {
+    display: none;
+ }
+
+ #button:checked~.project-grid:last-child {
+    display: grid;
+    margin-top: 40px;
+ }
+
+ #button:checked~.btn {
+    display: none;
+}
+
+.fa-angle-right {
+    margin-left: 4px;
+}
+
+/* Projects end */
+
+/* Contact start */
+#contact {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact h1 {
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
+
+#contact p {
+    color: #fff;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact li {
+    font-size: 24px;
+    padding: 20px 10px;
+    transition: transform 0.25s ease-in;
+}
+
+#contact li:hover {
+    transform: translateY(6px);
+}
+
+/* Contact end */
+
+/* Footer start */
+#footer {
+    background-color: black;
+    height: 10vh;
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer p:first-child {
+    margin-right: 20px;
+}
+
+#footer p:last-child {
+    margin-left: 20px;
+}
+
+/* Footer end */
+
