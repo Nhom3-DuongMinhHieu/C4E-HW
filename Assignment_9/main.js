@@ -130,7 +130,7 @@ const sumOdd = () => {
     return sum - sumEven()
 }
 
-console.log("Tổng các chẵn là: ", sumOdd())
+console.log("Tổng các lẻ là: ", sumOdd())
 
 // Số các số chia hết cho 3
 const chiahet3 = () => {
