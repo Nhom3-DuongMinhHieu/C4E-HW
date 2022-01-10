@@ -73,7 +73,7 @@ checkUsername(prompt("Please enter Username: "))
 // Problem 5:
 alert("Problem 5: Please open Console tab of the Devtools to see the results")
 const Arr = []
-let len = parseInt(prompt("Số phần tử có trong mảng là: "))
+let len = parseInt(prompt("Số phần tử có trong mảng là: (Chọn khoảng 4-5 số thôi anh ạ cho đỡ mỏi tay nhập số =))) )"))
 for (let i = 0; i < len; i++) {
     n = parseFloat(prompt("Nhập số thứ " + (i+1)))
     Arr[i] = n; 
@@ -112,25 +112,37 @@ const minArr = () => {
 console.log("Giá trị nhỏ nhất là: ", minArr())
 
 // Tổng chẵn, tổng lẻ
-const sumEven = () => {
-    let Even = 0
+// const sumEven = () => {
+//     let Even = 0
+//     for (let j = 0; j < len; j++) {
+//         Arr[j] % 2 == 0 ? Even = Even + Arr[j] : Even = Even
+//     }
+//     return Even
+// }
+
+// console.log("Tổng các chẵn là: ", sumEven())
+
+// const sumOdd = () => {
+//     let sum = 0
+//     for (let j = 0; j < len; j++) {
+//         sum = sum + Arr[j]
+//     }
+//     return sum - sumEven()
+// }
+
+// console.log("Tổng các lẻ là: ", sumOdd())
+
+const EvenOdd = () => {
+    let even = 0,
+        odd = 0
     for (let j = 0; j < len; j++) {
-        Arr[j] % 2 == 0 ? Even = Even + Arr[j] : Even = Even
+        Arr[j] % 2 == 0 ? even = even + Arr[j] : odd = odd + Arr[j]
     }
-    return Even
+    console.log("Tổng các số chẵn là: " + even)
+    console.log("Tổng các số lẻ là: " + odd)
 }
 
-console.log("Tổng các chẵn là: ", sumEven())
-
-const sumOdd = () => {
-    let sum = 0
-    for (let j = 0; j < len; j++) {
-        sum = sum + Arr[j]
-    }
-    return sum - sumEven()
-}
-
-console.log("Tổng các lẻ là: ", sumOdd())
+EvenOdd()
 
 // Số các số chia hết cho 3
 const chiahet3 = () => {
