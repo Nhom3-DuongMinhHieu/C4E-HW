@@ -48,18 +48,31 @@ equal.onclick = () => {
 // Problem 3:
 let input = document.querySelector("#input");
 let btnAdd = document.querySelector("#btn-add");
-let btnRem = document.querySelector("#btn-remover")
+let btnRem = document.querySelector("#btn-remove")
 let toDo = document.querySelector("#todo");
+let todoList = []
 
 btnAdd.onclick = () => {
-    let value = input.value
-    let item = document.createElement("li")
-    item.innerText = value
-    toDo.appendChild(item)
+    if(!input.value) {
+        alert("Bạn chưa nhập gì!")
+        return
+    }
+
+    if(todoList.find((el) => el === input.value)) {
+        alert("Đã tồn tại!")
+        input.value = ""
+    }
+
+    else {
+        todoList.push(input.value)
+        const liElement = document.createElement("li")
+        liElement.innerText = input.value
+        toDo.appendChild(liElement)
+        input.value = ""
+    }
 }
 
 btnRem.onclick = () => {
     let item = document.querySelector("li:last-child")
     toDo.removeChild(item)
 }
-
